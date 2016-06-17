@@ -52,9 +52,9 @@
         var aLines = $('#Input').val().split('\n');
         //alert(aLines.length + " : " + aLines[0]);
         //output array to file
-        var outputString = "START FILE "+ aLines.length + "\n";
+        var outputString = "HDR|" + aLines.length + "\n";
         outputString += aLines.join('\n');
-        outputString += "\nEND FILE";
+        outputString += "\nEND|" + aLines.length;
         //output to area and replace , with |
         $('#Output').text(outputString.replace(/(,)/g,"|"));
       }
